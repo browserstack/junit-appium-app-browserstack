@@ -1,3 +1,5 @@
+package com.browserstack;
+
 import static org.junit.Assert.*;
 
 import java.io.File;
@@ -21,6 +23,8 @@ import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import com.browserstack.Parallelized;
+
 @RunWith(Parallelized.class)
 public class JUnitParallelSample {
   private String platform;
@@ -31,11 +35,10 @@ public class JUnitParallelSample {
   public static LinkedList getEnvironments() throws Exception {
     LinkedList<String[]> env = new LinkedList();
 
-    env.add(new String[]{Platform.XP.toString(), "chrome", "27"});
-    env.add(new String[]{Platform.WINDOWS.toString(),"firefox","20"});
-    env.add(new String[]{Platform.WINDOWS.toString(),"ie","7"});
-    env.add(new String[]{Platform.WINDOWS.toString(),"opera","12.14"});
-//add more browsers here
+    env.add(new String[]{Platform.XP.toString(), "chrome", "48"});
+    env.add(new String[]{Platform.WINDOWS.toString(),"firefox","44"});
+    env.add(new String[]{Platform.WINDOWS.toString(),"ie","11"});
+    env.add(new String[]{Platform.WINDOWS.toString(),"opera","12"});
 
     return env;
   }
@@ -54,8 +57,11 @@ public class JUnitParallelSample {
     capability.setCapability("platform", platform);
     capability.setCapability("browser", browserName);
     capability.setCapability("browserVersion", browserVersion);
-    capability.setCapability("build", "JUnit-Parallel");
-    driver = new RemoteWebDriver(new URL("http://USERNAME:ACCESS_KEY@hub.browserstack.com/wd/hub"), capability);  
+    capability.setCapability("build", "Sample JUnit Tests");
+
+    String username = System.getenv("BROWSERSTACK_USERNAME");
+    String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
+    driver = new RemoteWebDriver(new URL("http://"+username+":"+accessKey+"@hub.browserstack.com/wd/hub"), capability);  
   }
 
   @Test
