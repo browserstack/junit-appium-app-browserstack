@@ -1,3 +1,5 @@
+package com.browserstack;
+
 import static org.junit.Assert.*;
 
 import java.io.File;
@@ -5,8 +7,8 @@ import java.io.IOException;
 import java.net.URL;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
@@ -22,12 +24,18 @@ public class JUnitTest {
   private static WebDriver driver;  
 
   @Before
-  public static void setUp() throws Exception {  
+  public void setUp() throws Exception {  
     DesiredCapabilities capability = DesiredCapabilities.chrome();
-    capability.setPlatform(Platform.MAC);
-    capability.setVersion("20.0");
+    capability.setCapability("os", "OS X");
+    capability.setCapability("os_version", "El Capitan");
+    capability.setCapability("browser", "firefox");
+    capability.setCapability("build", "Sample JUnit Tests");
+
+    String username = System.getenv("BROWSERSTACK_USERNAME");
+    String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
+
     driver = new RemoteWebDriver(
-      new URL("http://USERNAME:ACCESS_KEY@hub.browserstack.com/wd/hub"),
+      new URL("http://"+username+":"+accessKey+"@hub.browserstack.com/wd/hub"),
       capability
       );
   }  
@@ -43,7 +51,7 @@ public class JUnitTest {
   }  
 
   @After
-  public static void tearDown() throws Exception {  
+  public void tearDown() throws Exception {  
     driver.quit();  
   }  
 }
