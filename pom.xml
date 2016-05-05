@@ -30,5 +30,10 @@
       <artifactId>selenium-java</artifactId>
       <version>2.52.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.browserstack</groupId>
+      <artifactId>browserstack-local-java</artifactId>
+      <version>0.1.0</version>
+    </dependency>
   </dependencies>
 </project>
