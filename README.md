@@ -11,8 +11,9 @@ Sample for running [JUnit] tests with BrowserStack Automate.
 
 ### Running the tests
 - Run `mvn compile`
-- To start tests in series, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitTest"`
-- To start parallel tests run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitParallelSample"`
+- To start sample test, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitTest"`
+- To start local tests, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitLocalTest"`
+- To start parallel tests, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitParallelTest"`
 
 [JUnit]:http://junit.org
 [capabilities]:http://www.browserstack.com/automate/capabilities
