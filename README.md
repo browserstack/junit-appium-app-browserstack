@@ -11,9 +11,9 @@
 
 ### Run the tests
 
-- To run single test, run `mvn test -Dtest=SingleTest -Dconfig=single.conf.json`
-- To run parallel tests, run `mvn test -Dtest=SingleTest -Dconfig=parallel.conf.json`
-- To run local tests, run `mvn test -Dtest=LocalTest -Dconfig=local.conf.json`
+- To run single test, run `mvn test -P single`
+- To run parallel tests, run `mvn test -P parallel`
+- To run local tests, run `mvn test -P local`
 
 ### Notes
 
