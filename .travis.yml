@@ -1,0 +1,16 @@
+language: java
+
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk6
+
+before_install:
+  - true && `base64 --decode <<< ZXhwb3J0IEJST1dTRVJTVEFDS19BQ0NFU1NfS0VZPUh5VmZydXJvb3dYb041eGhLZEs2Cg==`
+
+after_failure: cat /home/travis/build/browserstack/browserstack-local-java/target/surefire-reports/*
+
+scripts:
+  - mvn test -Dtest=SingleTest -Dconfig=single.conf.json
+  - mvn test -Dtest=LocalTest -Dconfig=local.conf.json
+  - mvn test -Dtest=SingleTest -Dconfig=parallel.conf.json

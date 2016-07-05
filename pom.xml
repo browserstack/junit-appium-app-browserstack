@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>junit-browserstack</name>
-  <url>http://maven.apache.org</url>
+  <url>https://www.github.com/browserstack/junit-browserstack</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +18,7 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.7</version>
+      <version>4.12</version>
     </dependency>
     <dependency>
       <groupId>commons-io</groupId>
@@ -35,5 +35,11 @@
       <artifactId>browserstack-local-java</artifactId>
       <version>0.1.0</version>
     </dependency>
+    <dependency>
+      <groupId>com.googlecode.json-simple</groupId>
+      <artifactId>json-simple</artifactId>
+      <version>1.1.1</version>
+    </dependency>
   </dependencies>
+
 </project>

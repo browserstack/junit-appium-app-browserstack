@@ -1,20 +1,20 @@
-JUnit-BrowserStack
-=========
+# junit-browserstack
 
-Sample for running [JUnit] tests with BrowserStack Automate.
+[JUnit](http://junit.org) Integration with BrowserStack.
 
-### Configuring the capabilities
-- Open `src/main/java/com/browserstack/JUnitTest.java` or `src/main/java/com/browserstack/JUnitParallelSample.java`.
-- Add `username` and `accessKey` with your BrowserStack credentials. Don't have one? Get one on BrowserStack [dashboard].
-- Add / customise more [capabilities].
-- Optionally, you can add your BrowserStack credentials to the environment variables `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY`.
+## Setup
 
-### Running the tests
-- Run `mvn compile`
-- To start sample test, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitTest"`
-- To start local tests, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitLocalTest"`
-- To start parallel tests, run: `mvn exec:java -Dexec.mainClass="org.junit.runner.JUnitCore" -Dexec.args="com.browserstack.JUnitParallelTest"`
+- Clone the repo
+- Install dependencies `mvn compile`
+- Update `*.conf.json` files inside the `config/` directory with your BrowserStack Username and Access Key. (These can be found in the [settings](https://www.browserstack.com/accounts/settings) section on BrowserStack accounts page)
+- Alternatively, you can export the environment variables for the Username and Access Key of your BrowserStack account. `export BROWSERSTACK_USERNAME=<browserstack-username> && export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>`
 
-[JUnit]:http://junit.org
-[capabilities]:http://www.browserstack.com/automate/capabilities
-[dashboard]:https://www.browserstack.com/automate
+### Run the tests
+
+- To run single test, run `mvn test -Dtest=SingleTest -Dconfig=single.conf.json`
+- To run parallel tests, run `mvn test -Dtest=SingleTest -Dconfig=parallel.conf.json`
+- To run local tests, run `mvn test -Dtest=LocalTest -Dconfig=local.conf.json`
+
+### Notes
+
+- In order to test on different set of browsers, check out our [code generator](https://www.browserstack.com/automate/python#setting-os-and-browser)
