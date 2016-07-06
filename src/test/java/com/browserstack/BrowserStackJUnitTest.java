@@ -34,7 +34,7 @@ public class BrowserStackJUnitTest {
     private static JSONObject config;
 
     @Parameter(value = 0)
-    public int task_id;
+    public int taskID;
 
     @Parameters
     public static Iterable<? extends Object> data() throws Exception {
@@ -42,12 +42,12 @@ public class BrowserStackJUnitTest {
         config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + System.getProperty("config")));
         int envs = ((JSONArray)config.get("environments")).size();
 
-        List<Integer> task_ids = new ArrayList<Integer>();
+        List<Integer> taskIDs = new ArrayList<Integer>();
         for(int i=0; i<envs; i++) {
-            task_ids.add(i);
+            taskIDs.add(i);
         }
 
-        return task_ids;
+        return taskIDs;
     }
 
     @Before
@@ -56,7 +56,7 @@ public class BrowserStackJUnitTest {
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
 
-        Map<String, String> envCapabilities = (Map<String, String>) envs.get(task_id);
+        Map<String, String> envCapabilities = (Map<String, String>) envs.get(taskID);
         Iterator it = envCapabilities.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry)it.next();
