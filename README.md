@@ -1,20 +1,29 @@
 # junit-browserstack
+[JUnit](http://junit.org/junit4/) Integration with BrowserStack.
 
-[JUnit](http://junit.org) Integration with BrowserStack.
+![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780) 
+
+![JUnit](http://junit.org/junit4/images/junit-logo.png)
 
 ## Setup
+* Clone the repo
+* Install dependencies `mvn install`
+* Update *.conf.json files inside the `src/test/resources/conf` directory with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings). 
 
-- Clone the repo
-- Install dependencies `mvn install`
-- Update `*.conf.json` files inside the `src/test/resources/conf` directory with your BrowserStack Username and Access Key. (These can be found in the [settings](https://www.browserstack.com/accounts/settings) section on BrowserStack accounts page)
-- Alternatively, you can export the environment variables for the Username and Access Key of your BrowserStack account. `export BROWSERSTACK_USERNAME=<browserstack-username> && export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>`
+## Running your tests
+* To run a single test, run `mvn test -P single`
+* To run parallel tests, run `mvn test -P parallel`
+* To run local tests, run `mvn test -P local`
 
-### Run the tests
+## Notes
+* You can view your tests results on the [BrowserStack Automate dashboard](https://www.browserstack.com/automate)
+* To test on a different set of browsers, check out our [Platform Configurator](https://www.browserstack.com/automate/python#setting-os-and-browser)
+* For additional capabilities such as accept SSL certificattes, 
+* You can export the environment variables for the Username and Access Key of your BrowserStack account. 
+  ```
+  export BROWSERSTACK_USERNAME=<browserstack-username> &&
+  export BROWSERSTACK_ACCESS_KEY=<browserstack-access-key>
+  ```
 
-- To run single test, run `mvn test -P single`
-- To run parallel tests, run `mvn test -P parallel`
-- To run local tests, run `mvn test -P local`
-
-### Notes
-
-- In order to test on different set of browsers, check out our [code generator](https://www.browserstack.com/automate/python#setting-os-and-browser)
+## Requirements
+* Java 1.6+
