@@ -38,13 +38,16 @@ public class BrowserStackJUnitTest {
 
     @Parameters
     public static Iterable<? extends Object> data() throws Exception {
-        JSONParser parser = new JSONParser();
-        config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + System.getProperty("config")));
-        int envs = ((JSONArray)config.get("environments")).size();
-
         List<Integer> taskIDs = new ArrayList<Integer>();
-        for(int i=0; i<envs; i++) {
-            taskIDs.add(i);
+
+        if(System.getProperty("config") != null) {
+            JSONParser parser = new JSONParser();
+            config = (JSONObject) parser.parse(new FileReader("src/test/resources/conf/" + System.getProperty("config")));
+            int envs = ((JSONArray)config.get("environments")).size();
+
+            for(int i=0; i<envs; i++) {
+              taskIDs.add(i);
+            }
         }
 
         return taskIDs;
