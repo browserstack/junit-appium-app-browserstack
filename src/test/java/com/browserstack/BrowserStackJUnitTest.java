@@ -24,9 +24,8 @@ import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
-import org.junit.runners.Parameterized;
 
-@RunWith(Parameterized.class)
+@RunWith(Parallelized.class)
 public class BrowserStackJUnitTest {
     public WebDriver driver;
     private Local l;
