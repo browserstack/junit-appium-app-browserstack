@@ -5,17 +5,19 @@
 
   "capabilities": {
     "build": "junit-browserstack",
-    "name": "parallel_test",
-    "browserstack.debug": true
+    "name": "parallel_appium_test",
+    "browserstack.debug": true,
+    "realMobile": true,
+    "app": "bs://d747176bd63686393208fea69d1963ec9c225080"
   },
 
   "environments": [{
-    "browser": "chrome"
+    "device": "Google Pixel"
   },{
-    "browser": "firefox"
+    "device": "Samsung Galaxy S7"
   },{
-    "browser": "safari"
+    "device": "Samsung Galaxy S6"
   },{
-    "browser": "internet explorer"
+    "device": "Google Nexus 9"
   }]
 }
