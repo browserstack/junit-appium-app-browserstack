@@ -5,7 +5,7 @@
 
 ![JUnit](http://junit.org/junit4/images/junit-logo.png)
 
-Code samples to get started with Appium tests for your Native App using the TestNG framework.
+Code samples to get started with Appium tests for your Native App using the JUnit framework.
 
 ## Resources
 * [Android Get Started guide](https://www.browserstack.com/app-automate/get-started)
