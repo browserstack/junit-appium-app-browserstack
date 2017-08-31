@@ -1,10 +1,3 @@
-# junit-appium-app-browserstack
-[JUnit](http://junit.org/junit4/) Integration with BrowserStack.
-
-![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780) 
-
-![JUnit](http://junit.org/junit4/images/junit-logo.png)
-
 ## Setup
 * Clone the repo
 * Install dependencies `mvn install`
