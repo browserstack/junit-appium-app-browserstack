@@ -8,7 +8,7 @@
     <packaging>jar</packaging>
 
     <name>junit-browserstack</name>
-    <url>https://www.github.com/browserstack/junit-browserstack</url>
+    <url>https://www.github.com/browserstack/junit-appium-app-browserstack</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

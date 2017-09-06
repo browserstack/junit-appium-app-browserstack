@@ -10,5 +10,5 @@ Code samples to get started with Appium tests for your Native App using the JUni
 ## Resources
 * [Android Get Started guide](https://www.browserstack.com/app-automate/get-started)
 * [Android sample code repo](https://github.com/browserstack/junit-appium-app-browserstack/tree/master/android)
-* [IOS Get Started guide](https://www.browserstack.com/app-automate/get-started)
+* [IOS Get Started guide](https://www.browserstack.com/app-automate/get-started-ios)
 * [IOS sample code repo](https://github.com/browserstack/junit-appium-app-browserstack/tree/master/ios)
