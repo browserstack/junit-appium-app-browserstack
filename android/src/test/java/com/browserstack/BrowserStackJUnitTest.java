@@ -1,20 +1,20 @@
 package com.browserstack;
 import com.browserstack.local.Local;
 
-import java.io.FileReader;
 import java.net.URL;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
 import java.util.Iterator;
-import org.json.simple.JSONObject;
+import java.util.ArrayList;
+import java.io.FileReader;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.junit.After;
@@ -25,7 +25,7 @@ import org.junit.runners.Parameterized.Parameters;
 
 @RunWith(Parallelized.class)
 public class BrowserStackJUnitTest {
-    public WebDriver driver;
+    public AndroidDriver<AndroidElement> driver;
     private Local l;
 
     private static JSONObject config;
