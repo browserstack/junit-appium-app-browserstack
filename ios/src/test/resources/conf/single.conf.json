@@ -7,8 +7,7 @@
     "build": "junit-browserstack",
     "name": "single_appium_test",
     "browserstack.debug": true,
-    "app": "bs://22d213f11fb67f46d88ef0a5acc368a5ce06c0dc",
-    "browserstack.enterpriseApp":true
+    "app": "bs://<hashed app-id>"
   },
 
   "environments": [{
