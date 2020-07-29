@@ -1,0 +1,18 @@
+{
+    "server": "hub-cloud.browserstack.com",
+    "username": "BROWSERSTACK_USERNAME",
+    "access_key": "BROWSERSTACK_ACCESS_KEY",
+  
+    "capabilities": {
+      "project": "First Junit4 Android Project",
+      "build": "Junit4 Android Local",
+      "name": "local_test",
+      "browserstack.debug": true,
+      "browserstack.local": true,
+      "app": "bs://<hashed app-id>"
+    },
+  
+    "environments": [{
+      "device": "Samsung Galaxy S7"
+    }]
+}
