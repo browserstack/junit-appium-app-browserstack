@@ -1,7 +1,5 @@
 package com.browserstack.run_parallel_test;
 
-import com.browserstack.local.Local;
-
 import java.net.URL;
 import java.util.Map;
 import java.util.List;
@@ -28,7 +26,6 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parallelized.class)
 public class BrowserStackJUnitTest {
     public AndroidDriver<AndroidElement> driver;
-    private Local l;
 
     private static JSONObject config;
 
@@ -87,19 +84,11 @@ public class BrowserStackJUnitTest {
             capabilities.setCapability("app", app);
         }
 
-        if (capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true") {
-            l = new Local();
-            Map<String, String> options = new HashMap<String, String>();
-            options.put("key", accessKey);
-            l.start(options);
-        }
-
         driver = new AndroidDriver(new URL("http://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), capabilities);
     }
 
     @After
     public void tearDown() throws Exception {
         driver.quit();
-        if (l != null) l.stop();
     }
 }

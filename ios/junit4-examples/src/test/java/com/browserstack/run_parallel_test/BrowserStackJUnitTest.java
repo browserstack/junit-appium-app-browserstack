@@ -1,7 +1,5 @@
 package com.browserstack.run_parallel_test;
 
-import com.browserstack.local.Local;
-
 import java.net.URL;
 import java.util.Map;
 import java.util.List;
