@@ -21,10 +21,10 @@ public class ParallelTest extends BrowserStackJUnitTest {
     createConnection(taskId);
 
     AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
-            ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("Search Wikipedia")));
+        ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("Search Wikipedia")));
     searchElement.click();
     AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, 30).until(
-            ExpectedConditions.elementToBeClickable(MobileBy.id("org.wikipedia.alpha:id/search_src_text")));
+        ExpectedConditions.elementToBeClickable(MobileBy.id("org.wikipedia.alpha:id/search_src_text")));
     insertTextElement.sendKeys("BrowserStack");
     Thread.sleep(5000);
 

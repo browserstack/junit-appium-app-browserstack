@@ -28,7 +28,7 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class BrowserStackJUnitTest {
     public IOSDriver<IOSElement> driver;
-    private Local l;
+    private Local local;
 
     private static JSONObject config;
 
@@ -88,10 +88,10 @@ public class BrowserStackJUnitTest {
         }
 
         if (capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true") {
-            l = new Local();
+            local = new Local();
             Map<String, String> options = new HashMap<String, String>();
             options.put("key", accessKey);
-            l.start(options);
+            local.start(options);
         }
 
         driver = new IOSDriver(new URL("http://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), capabilities);
@@ -100,6 +100,6 @@ public class BrowserStackJUnitTest {
     @After
     public void tearDown() throws Exception {
         driver.quit();
-        if (l != null) l.stop();
+        if (local != null) local.stop();
     }
 }

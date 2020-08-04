@@ -9,7 +9,7 @@
 
 ### Requirements
 
-1. Java 8
+1. Java 8+
 
     - If Java is not installed, follow these instructions:
         - For Windows, download latest java version from [here](https://java.com/en/download/) and run the installer executable

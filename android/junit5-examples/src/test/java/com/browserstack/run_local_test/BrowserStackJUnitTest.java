@@ -25,7 +25,7 @@ import java.util.stream.Stream;
 public class BrowserStackJUnitTest {
 
     public AndroidDriver<AndroidElement> driver;
-    private Local l;
+    private Local local;
     public String username;
     public String accessKey;
     public DesiredCapabilities capabilities;
@@ -88,10 +88,10 @@ public class BrowserStackJUnitTest {
         }
 
         if(capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true"){
-            l = new Local();
+            local = new Local();
             Map<String, String> options = new HashMap<String, String>();
             options.put("key", accessKey);
-            l.start(options);
+            local.start(options);
         }
     }
 
@@ -99,6 +99,6 @@ public class BrowserStackJUnitTest {
     public void tearDown() throws Exception {
         driver.quit();
 
-        if(l != null) l.stop();
+        if(local != null) local.stop();
     }
 }

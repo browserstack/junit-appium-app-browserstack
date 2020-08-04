@@ -25,10 +25,10 @@ public class LocalTest extends BrowserStackJUnitTest{
     createConnection(taskId);
 
     AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
-            ExpectedConditions.elementToBeClickable(MobileBy.id("com.example.android.basicnetworking:id/test_action")));
+        ExpectedConditions.elementToBeClickable(MobileBy.id("com.example.android.basicnetworking:id/test_action")));
     searchElement.click();
     AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, 30).until(
-            ExpectedConditions.elementToBeClickable(MobileBy.className("android.widget.TextView")));
+        ExpectedConditions.elementToBeClickable(MobileBy.className("android.widget.TextView")));
 
     AndroidElement testElement = null;
     List<AndroidElement> allTextViewElements = driver.findElementsByClassName("android.widget.TextView");

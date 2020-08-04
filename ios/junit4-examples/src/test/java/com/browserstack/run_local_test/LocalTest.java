@@ -22,7 +22,7 @@ public class LocalTest extends BrowserStackJUnitTest {
   @Test
   public void test() throws Exception {
     IOSElement testButton = (IOSElement) new WebDriverWait(driver, 30).until(
-            ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("TestBrowserStackLocal")));
+        ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("TestBrowserStackLocal")));
     testButton.click();
 
     WebDriverWait wait = new WebDriverWait(driver, 30);
