@@ -12,10 +12,8 @@
     },
   
     "environments": [{
-      "device": "Google Pixel"
+      "device": "Google Pixel 3"
     },{
-      "device": "Samsung Galaxy S7"
-    },{
-      "device": "Samsung Galaxy S20"
+      "device": "Samsung Galaxy S10e"
     }]
 }

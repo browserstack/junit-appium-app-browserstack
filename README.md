@@ -16,9 +16,8 @@
         - For Mac and Linux, run `java -version` to see what java version is pre-installed. If you want a different version download from [here](https://java.com/en/download/)
 
 2. Maven
-
-   - If Maven is not installed, follow the instructions [here](https://maven.apache.org/install.html)
-
+   - If Maven is not downloaded, download it from [here](https://maven.apache.org/download.cgi)
+   - For installation, follow the instructions [here]((https://maven.apache.org/install.html))
 ### Install the dependencies
 
 To install the dependencies for Android tests, run :
@@ -142,6 +141,9 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
 
+- If you do not have an local .apk file and looking to simply try local for  App Automate, [you can download our sample local app and upload](https://www.browserstack.com/app-automate/sample-apps/android/LocalSample.apk)
+     to the BrowserStack servers using the same app upload API.
+     
 - Junit4
    - Switch to `run-local-test` directory under [Android examples](android/junit4-examples/) or [iOS examples](ios/junit4-examples/)
    - Then run
