@@ -145,13 +145,13 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
      to the BrowserStack servers using the same app upload API.
      
 - Junit4
-   - Switch to `run-local-test` directory under [Android examples](android/junit4-examples/) or [iOS examples](ios/junit4-examples/)
+   - Switch to `run_local_test` directory under [Android examples](android/junit4-examples/) or [iOS examples](ios/junit4-examples/)
    - Then run
         ```sh
          mvn test -P local
        ```
 - Junit5
-    - Switch to `run-local-test` directory under [Android examples](android/junit5-examples/) or [iOS examples](ios/junit5-examples/)
+    - Switch to `run_local_test` directory under [Android examples](android/junit5-examples/) or [iOS examples](ios/junit5-examples/)
       - Then run
            ```sh
             mvn test -P local
