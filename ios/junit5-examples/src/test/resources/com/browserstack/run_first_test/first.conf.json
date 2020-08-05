@@ -12,6 +12,7 @@
   },
 
   "environments": [{
-    "device": "iPhone 11 Pro"
+    "device": "iPhone 11 Pro",
+    "os_version":  "13"
   }]
 }
