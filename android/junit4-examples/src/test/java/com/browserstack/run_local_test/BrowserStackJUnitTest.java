@@ -100,6 +100,8 @@ public class BrowserStackJUnitTest {
 
     @After
     public void tearDown() throws Exception {
+        // Invoke driver.quit() to indicate that the test is completed. 
+        // Otherwise, it will appear as timed out on BrowserStack.
         driver.quit();
         if (local != null) local.stop();
     }
