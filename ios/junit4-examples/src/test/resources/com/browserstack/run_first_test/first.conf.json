@@ -8,7 +8,7 @@
       "build": "Junit4 iOS First",
       "name": "first_test",
       "browserstack.debug": true,
-      "app": "bs://<hashed app-id>"
+      "app": "bs://<app-id>"
     },
   
     "environments": [{
