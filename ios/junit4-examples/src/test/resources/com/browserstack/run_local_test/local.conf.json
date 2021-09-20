@@ -5,7 +5,7 @@
   
     "capabilities": {
       "project": "First Junit4 iOS Project",
-      "build": "Junit4 iOS Local",
+      "build": "browserstack-build-1",
       "name": "local_test",
       "browserstack.debug": true,
       "browserstack.local": true,
