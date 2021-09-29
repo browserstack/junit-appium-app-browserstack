@@ -5,7 +5,7 @@
   
     "capabilities": {
       "project": "First Junit4 iOS Project",
-      "build": "Junit4 iOS First",
+      "build": "browserstack-build-1",
       "name": "first_test",
       "browserstack.debug": true,
       "app": "bs://<app-id>"
