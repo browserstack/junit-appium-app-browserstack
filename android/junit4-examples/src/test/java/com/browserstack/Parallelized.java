@@ -1,4 +1,4 @@
-package com.browserstack.run_parallel_test;
+package com.browserstack;
 
 import org.junit.runners.Parameterized;
 import org.junit.runners.model.RunnerScheduler;
