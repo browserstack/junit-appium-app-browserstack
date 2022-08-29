@@ -1,8 +1,8 @@
-package com.browserstack.run_local_test;
+package com.browserstack;
 
 import com.browserstack.local.Local;
 import io.appium.java_client.ios.IOSDriver;
-import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.ios.options.XCUITestOptions;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -12,7 +12,6 @@ import org.junit.jupiter.api.BeforeEach;
 
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
-import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -24,11 +23,11 @@ import java.util.stream.Stream;
 @Execution(ExecutionMode.CONCURRENT)
 public class BrowserStackJUnitTest {
 
-    public IOSDriver<IOSElement> driver;
+    public IOSDriver driver;
     private Local local;
     public String username;
     public String accessKey;
-    public DesiredCapabilities capabilities;
+    public XCUITestOptions options;
 
     public static JSONObject config;
 
@@ -36,12 +35,14 @@ public class BrowserStackJUnitTest {
 
         List<Integer> taskIDs = new ArrayList<Integer>();
 
-        JSONParser parser = new JSONParser();
-        config = (JSONObject) parser.parse(new FileReader("src/test/resources/com/browserstack/run_local_test/local.conf.json"));
-        int envs = ((JSONArray) config.get("environments")).size();
+        if (System.getProperty("config") != null) {
+            JSONParser parser = new JSONParser();
+            config = (JSONObject) parser.parse(new FileReader("src/test/resources/com/browserstack/" + System.getProperty("config")));
+            int envs = ((JSONArray) config.get("environments")).size();
 
-        for (int i = 0; i < envs; i++) {
-            taskIDs.add(i);
+            for (int i = 0; i < envs; i++) {
+                taskIDs.add(i);
+            }
         }
 
         return taskIDs.stream();
@@ -54,45 +55,50 @@ public class BrowserStackJUnitTest {
         Iterator it = envCapabilities.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
+            options.setCapability(pair.getKey().toString(), pair.getValue().toString());
         }
 
-        driver = new IOSDriver(new URL("http://" + username + ":" + accessKey + "@" + config.get("server") + "/wd/hub"), capabilities);
+        driver = new IOSDriver(new URL("http://"+config.get("server")+"/wd/hub"), options);
     }
 
     @BeforeEach
     public void setup() throws Exception {
-        capabilities = new DesiredCapabilities();
+        options = new XCUITestOptions();
 
         Map<String, String> commonCapabilities = (Map<String, String>) config.get("capabilities");
         Iterator it = commonCapabilities.entrySet().iterator();
         while (it.hasNext()) {
             Map.Entry pair = (Map.Entry) it.next();
-            if (capabilities.getCapability(pair.getKey().toString()) == null) {
-                capabilities.setCapability(pair.getKey().toString(), pair.getValue().toString());
+            if (options.getCapability(pair.getKey().toString()) == null) {
+                options.setCapability(pair.getKey().toString(), pair.getValue());
+            }else if (pair.getKey().toString().equalsIgnoreCase("bstack:options")){
+                HashMap bstackOptionsMap = (HashMap) pair.getValue();
+                bstackOptionsMap.putAll((HashMap) options.getCapability("bstack:options"));
+                options.setCapability(pair.getKey().toString(), bstackOptionsMap);
             }
         }
 
+        JSONObject browserstackOptions = (JSONObject) options.getCapability("bstack:options");
         username = System.getenv("BROWSERSTACK_USERNAME");
         if (username == null) {
-            username = (String) config.get("username");
+            username = (String) browserstackOptions.get("userName");
         }
 
         accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
         if (accessKey == null) {
-            accessKey = (String) config.get("access_key");
+            accessKey = (String) browserstackOptions.get("accessKey");
         }
 
         String app = System.getenv("BROWSERSTACK_APP_ID");
         if (app != null && !app.isEmpty()) {
-            capabilities.setCapability("app", app);
+            options.setCapability("app", app);
         }
 
-        if (capabilities.getCapability("browserstack.local") != null && capabilities.getCapability("browserstack.local") == "true") {
+        if (browserstackOptions.get("local") != null && browserstackOptions.get("local").toString() == "true") {
             local = new Local();
-            Map<String, String> options = new HashMap<String, String>();
-            options.put("key", accessKey);
-            local.start(options);
+            Map<String, String> LocalOptions = new HashMap<String, String>();
+            LocalOptions.put("key", accessKey);
+            local.start(LocalOptions);
         }
     }
 

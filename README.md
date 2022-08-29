@@ -4,6 +4,13 @@ This repository demonstrates how to run Appium tests in [JUnit4](http://junit.or
 
 ![BrowserStack Logo](https://d98b8t1nnulk5.cloudfront.net/production/images/layout/logo-header.png?1469004780)
 
+## Based on
+
+These code samples are currently based on:
+
+- **Appium-Java-Client:** `8.1.1`
+- **Protocol:** `W3C`
+
 ## Setup
 
 ### Requirements
@@ -61,32 +68,32 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
 ### **Run first test :**
 
 - Junit4
-  - Switch to `run_first_test` directory under [Android Junit4 examples](android/junit4-examples) or [iOS Junit4 examples](ios/junit4-examples)
-  - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/java/junit)
+  - Update `first.conf.json` file inside the `src/test/resources/com/browserstack/run_first_test` of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P first`
 
 - Junit5
-  - Switch to `run_first_test` directory under [Android Junit5 examples](android/junit5-examples) or [iOS Junit5 examples](ios/junit5-examples)
-  - Follow the steps outlined in the documentation - [Get Started with your first test on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/java/junit)
+  - Update `first.conf.json` file inside the `src/test/resources/com/browserstack/run_first_test` of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P first`
 
 ### **Speed up test execution with parallel testing :**
 
 - Junit4
-  - Switch to `run_parallel_test` directory under [Android Junit4 examples](android/junit4-examples/) or [iOS Junit4 examples](ios/junit4-examples/)
-  - Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/java/junit/parallelize-tests)
+  - Update `parallel.conf.json` file inside the `src/test/resources/com/browserstack/run_parallel_test` of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P parallel`
   
 - Junit5
-  - Switch to `run_parallel_test` directory under [Android Junit5 examples](android/junit5-examples/) or [iOS Junit5 examples](ios/junit5-examples/)
-  - Follow the steps outlined in the documentation - [Get Started with parallel testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/java/junit/parallelize-tests)
+  - Update `parallel.conf.json` file inside the `src/test/resources/com/browserstack/run_parallel_test` of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P parallel`
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
 
 - Junit4
-  - Switch to `run_local_test` directory under [Android Junit4 examples](android/junit4-examples/) or [iOS Junit4 examples](ios/junit4-examples/)
-  - Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/java/junit/local-testing)
+  - Update `local.conf.json` file inside the `src/test/resources/com/browserstack/run_local_test` of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P local`
 
 - Junit5
-  - Switch to `run_local_test` directory under [Android Junit5 examples](android/junit5-examples/) or [iOS Junit5 examples](ios/junit5-examples/)
-  - Follow the steps outlined in the documentation - [Get Started with Local testing on App Automate](https://www.browserstack.com/docs/app-automate/appium/getting-started/java/junit/local-testing)
+  - Update `local.conf.json` file inside the `src/test/resources/com/browserstack/run_local_test` of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P local`
 
 **Note**: If you are facing any issues, refer [Getting Help section](#Getting-Help)
 

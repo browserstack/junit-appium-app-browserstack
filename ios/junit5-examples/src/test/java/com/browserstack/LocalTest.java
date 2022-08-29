@@ -1,7 +1,6 @@
-package com.browserstack.run_local_test;
+package com.browserstack;
 
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.ios.IOSElement;
+import io.appium.java_client.AppiumBy;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -11,6 +10,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
+
+import java.time.Duration;
 
 import java.io.File;
 import java.io.IOException;
@@ -25,19 +27,19 @@ public class LocalTest extends BrowserStackJUnitTest{
 
     createConnection(taskId);
 
-    IOSElement testButton = (IOSElement) new WebDriverWait(driver, 30).until(
-        ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("TestBrowserStackLocal")));
+    WebElement testButton = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+        ExpectedConditions.elementToBeClickable(AppiumBy.accessibilityId("TestBrowserStackLocal")));
     testButton.click();
 
-    WebDriverWait wait = new WebDriverWait(driver, 30);
+    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     wait.until(new ExpectedCondition<Boolean>() {
       @Override
       public Boolean apply(WebDriver d) {
-        String result = d.findElement(MobileBy.AccessibilityId("ResultBrowserStackLocal")).getAttribute("value");
+        String result = d.findElement(AppiumBy.accessibilityId("ResultBrowserStackLocal")).getAttribute("value");
         return result != null && result.length() > 0;
       }
     });
-    IOSElement resultElement = (IOSElement) driver.findElement(MobileBy.AccessibilityId("ResultBrowserStackLocal"));
+    WebElement resultElement = (WebElement) driver.findElement(AppiumBy.accessibilityId("ResultBrowserStackLocal"));
 
     String resultString = resultElement.getText().toLowerCase();
     System.out.println(resultString);
