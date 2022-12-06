@@ -3,3 +3,4 @@ target/
 local.log
 .idea
 *.iml
+android/junit4-examples/logs
