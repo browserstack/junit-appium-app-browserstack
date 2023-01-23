@@ -2,8 +2,7 @@ package com.browserstack;
 
 import io.appium.java_client.AppiumBy;
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -21,11 +20,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LocalTest extends BrowserStackJUnitTest{
 
-  @ParameterizedTest
-  @MethodSource("devices")
-  void testCalcOne(int taskId) throws IOException {
-
-    createConnection(taskId);
+  @Test
+  void testCalcOne() throws IOException {
 
     WebElement testButton = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
         ExpectedConditions.elementToBeClickable(AppiumBy.accessibilityId("TestBrowserStackLocal")));

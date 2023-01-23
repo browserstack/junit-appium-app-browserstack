@@ -68,32 +68,22 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
 ### **Run first test :**
 
 - Junit4
-  - Update `first.conf.json` file inside the `src/test/resources/com/browserstack/run_first_test` of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P first`
+  - Update `browserstack.yml` file at root level of Android Junit4 examples or iOS Junit4 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P sample-test`
 
 - Junit5
-  - Update `first.conf.json` file inside the `src/test/resources/com/browserstack/run_first_test` of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P first`
-
-### **Speed up test execution with parallel testing :**
-
-- Junit4
-  - Update `parallel.conf.json` file inside the `src/test/resources/com/browserstack/run_parallel_test` of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P parallel`
-  
-- Junit5
-  - Update `parallel.conf.json` file inside the `src/test/resources/com/browserstack/run_parallel_test` of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P parallel`
+  - Update `browserstack.yml` file at root level of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P sample-test`
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
 
 - Junit4
-  - Update `local.conf.json` file inside the `src/test/resources/com/browserstack/run_local_test` of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P local`
+  - Update `browserstack.yml` file at root level of Android Junit4 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P sample-local-test`
 
 - Junit5
-  - Update `local.conf.json` file inside the `src/test/resources/com/browserstack/run_local_test` of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P local`
+  - Update `browserstack.yml` file at root level of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Run `mvn test -P sample-local-test`
 
 **Note**: If you are facing any issues, refer [Getting Help section](#Getting-Help)
 

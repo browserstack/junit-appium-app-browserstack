@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.browserstack</groupId>
@@ -12,22 +12,20 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <surefire.version>2.19.1</surefire.version>
-
-        <test.file></test.file>
-        <config.file>default</config.file>
+        <surefire.version>3.0.0-M5</surefire.version>
+        <config.file>com/browserstack/FirstTest.java</config.file>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
+            <artifactId>junit-jupiter-api</artifactId>
             <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-params</artifactId>
+            <artifactId>junit-jupiter-engine</artifactId>
             <version>5.9.0</version>
             <scope>test</scope>
         </dependency>
@@ -47,14 +45,15 @@
             <version>8.1.1</version>
         </dependency>
         <dependency>
-            <groupId>com.browserstack</groupId>
-            <artifactId>browserstack-local-java</artifactId>
-            <version>1.0.3</version>
-        </dependency>
-        <dependency>
             <groupId>com.googlecode.json-simple</groupId>
             <artifactId>json-simple</artifactId>
             <version>1.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>com.browserstack</groupId>
+            <artifactId>browserstack-java-sdk</artifactId>
+            <version>LATEST</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
@@ -62,14 +61,27 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>getClasspathFilenames</id>
+                        <goals>
+                            <goal>properties</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>${surefire.version}</version>
                 <configuration>
-                    <properties>
-                        <configurationParameters>
-                            junit.jupiter.execution.parallel.enabled=true
-                        </configurationParameters>
-                    </properties>
+                    <includes>
+                        <include>${config.file}</include>
+                    </includes>
+                    <argLine>
+                        -javaagent:${com.browserstack:browserstack-java-sdk:jar}
+                    </argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -86,7 +98,7 @@
 
     <profiles>
         <profile>
-            <id>first</id>
+            <id>sample-test</id>
             <build>
                 <plugins>
                     <plugin>
@@ -94,11 +106,11 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <includes>
-                                <include>FirstTest.java</include>
+                                <include>com/browserstack/FirstTest.java</include>
                             </includes>
-                            <systemPropertyVariables>
-                                <config>run_first_test/first.conf.json</config>
-                            </systemPropertyVariables>
+                            <argLine>
+                                -javaagent:${com.browserstack:browserstack-java-sdk:jar}
+                            </argLine>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -106,29 +118,7 @@
         </profile>
 
         <profile>
-            <id>parallel</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-surefire-plugin</artifactId>
-                        <configuration>
-                            <parallel>classes</parallel>
-                            <threadCount>2</threadCount>
-                            <includes>
-                                <include>FirstTest.java</include>
-                            </includes>
-                            <systemPropertyVariables>
-                                <config>run_parallel_test/parallel.conf.json</config>
-                            </systemPropertyVariables>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-
-        <profile>
-            <id>local</id>
+            <id>sample-local-test</id>
             <build>
                 <plugins>
                     <plugin>
@@ -136,11 +126,11 @@
                         <artifactId>maven-surefire-plugin</artifactId>
                         <configuration>
                             <includes>
-                                <include>LocalTest.java</include>
+                                <include>com/browserstack/LocalTest.java</include>
                             </includes>
-                            <systemPropertyVariables>
-                                <config>run_local_test/local.conf.json</config>
-                            </systemPropertyVariables>
+                            <argLine>
+                                -javaagent:${com.browserstack:browserstack-java-sdk:jar}
+                            </argLine>
                         </configuration>
                     </plugin>
                 </plugins>
