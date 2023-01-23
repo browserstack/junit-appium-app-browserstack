@@ -3,8 +3,7 @@ package com.browserstack;
 import io.appium.java_client.AppiumBy;
 
 import org.apache.commons.io.FileUtils;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -20,12 +19,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class LocalTest extends BrowserStackJUnitTest{
 
-  @ParameterizedTest
-  @MethodSource("devices")
-  void test(int taskId) throws IOException, InterruptedException {
-
-    createConnection(taskId);
-
+  @Test
+  void test() throws IOException, InterruptedException {
     WebElement searchElement = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
         ExpectedConditions.elementToBeClickable(AppiumBy.id("com.example.android.basicnetworking:id/test_action")));
     searchElement.click();
