@@ -22,9 +22,9 @@ buildName: browserstack build
 buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${expression}
 # Set `framework` of your test suite. Example, `testng`, `cucumber`, `cucumber-testng`
 # This property is needed to send test context to BrowserStack (test name, status)
-framework: junit5
+framework: junit4
 
-source: junit5:appium-sample-sdk:v1.0
+source: junit4:appium-sample-sdk:v1.0
 
 app: ../BStackSampleApp.ipa
 #app: ../LocalSample.ipa #For running local tests
@@ -55,7 +55,7 @@ platforms:
 # Example 1 - If you have configured 3 platforms and set `parallelsPerPlatform` as 2, a total of 6 (2 * 3) parallel threads will be used on BrowserStack
 #
 # Example 2 - If you have configured 1 platform and set `parallelsPerPlatform` as 5, a total of 5 (1 * 5) parallel threads will be used on BrowserStack
-parallelsPerPlatform: 2
+parallelsPerPlatform: 1
 
 # ==========================================
 # BrowserStack Local
