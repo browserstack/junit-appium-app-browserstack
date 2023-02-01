@@ -37,13 +37,13 @@ app: ../BStackSampleApp.ipa
 
 platforms:
   - deviceName: iPhone 14 Pro
-    osVersion: 16
+    platformVersion: 16
     platformName: ios
   - deviceName: iPhone 13 Pro
-    osVersion: 15
+    platformVersion: 15
     platformName: ios
   - deviceName: iPhone XS
-    osVersion: 14
+    platformVersion: 14
     platformName: ios
 
 # =======================
@@ -75,5 +75,3 @@ browserstackLocal: true # <boolean> (Default false)
 # ===================
 debug: false # <boolean> # Set to true if you need screenshots for every selenium command ran
 networkLogs: false # <boolean> Set to true to enable HAR logs capturing
-consoleLogs: errors # <string> Remote browser's console debug levels to be printed (Default: errors)
-# Available options are `disable`, `errors`, `warnings`, `info`, `verbose` (Default: errors)

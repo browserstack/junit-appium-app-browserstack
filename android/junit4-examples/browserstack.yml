@@ -36,13 +36,13 @@ app: ../WikipediaSample.apk
 # Entire list available here -> (https://www.browserstack.com/list-of-browsers-and-platforms/automate)
 platforms:
   - deviceName: Samsung Galaxy S22 Ultra
-    osVersion: 12.0
+    platformVersion: 12.0
     platformName: android
   - deviceName: Samsung Galaxy S21
-    osVersion: 11.0
+    platformVersion: 11.0
     platformName: android
   - deviceName: Google Pixel 6 Pro
-    osVersion: 12.0
+    platformVersion: 12.0
     platformName: android
 
 # =======================
@@ -74,5 +74,3 @@ browserstackLocal: true # <boolean> (Default false)
 # ===================
 debug: false # <boolean> # Set to true if you need screenshots for every selenium command ran
 networkLogs: false # <boolean> Set to true to enable HAR logs capturing
-consoleLogs: errors # <string> Remote browser's console debug levels to be printed (Default: errors)
-# Available options are `disable`, `errors`, `warnings`, `info`, `verbose` (Default: errors)
