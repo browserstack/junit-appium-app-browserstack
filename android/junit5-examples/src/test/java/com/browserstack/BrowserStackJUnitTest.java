@@ -2,7 +2,6 @@ package com.browserstack;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
-import org.json.simple.JSONObject;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.yaml.snakeyaml.Yaml;
@@ -32,8 +31,9 @@ public class BrowserStackJUnitTest {
         options = new UiAutomator2Options();
         userName = System.getenv("BROWSERSTACK_USERNAME") != null ? System.getenv("BROWSERSTACK_USERNAME") : (String) browserStackYamlMap.get("userName");
         accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY") != null ? System.getenv("BROWSERSTACK_ACCESS_KEY") : (String) browserStackYamlMap.get("accessKey");
-        HashMap<String, Object> bStackOptions = new HashMap<>();
-        options.setCapability("bstack:options", bStackOptions);
+        options.setCapability("appium:app", "bs://sample.app");
+        options.setCapability("appium:deviceName", "Samsung Galaxy S22 Ultra");
+        options.setCapability("appium:platformVersion", "12.0");
 
         driver = new AndroidDriver(new URL(String.format("https://%s:%s@hub.browserstack.com/wd/hub", userName , accessKey)), options);
     }
