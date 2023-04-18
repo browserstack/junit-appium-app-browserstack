@@ -27,37 +27,37 @@ These code samples are currently based on:
 
 ### Install the dependencies
 
-To install the dependencies for Android tests, run :
+To install the dependencies for JUnit4 tests, run :
 
-- For Junit4
+- For Android
 
     ```sh
-    cd android/junit4-examples
+    cd junit-4/android
     mvn clean
     ```
 
-- For Junit5
+- For iOS
 
     ```sh
-    cd android/junit5-examples
+    cd junit-4/ios
     mvn clean
     ```
 
 Or,
 
-To install the dependencies for iOS tests, run :
+To install the dependencies for JUnit5 tests, run :
 
-- For Junit4
+- For Android
 
     ```sh
-    cd ios/junit4-examples
+    cd junit-5/android
     mvn clean
     ```
 
-- For Junit5
+- For iOS
 
     ```sh
-    cd ios/junit5-examples
+    cd junit-5/ios
     mvn clean
     ```
 
@@ -68,18 +68,18 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
 ### **Run first test :**
 
 - Junit4
-  - Update `browserstack.yml` file at root level of [Android Junit4 examples](android/junit4-examples) or [iOS Junit4 examples](ios/junit4-examples) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Update `browserstack.yml` file at root level of [Android Junit4 examples](junit-4/android) or [iOS Junit4 examples](junit-4/ios) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
   - Run `mvn test -P sample-test`
 
 - Junit5
-  - Update `browserstack.yml` file at root level of [Android Junit5 examples](android/junit5-examples) or [iOS Junit5 examples](ios/junit5-examples) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Update `browserstack.yml` file at root level of [Android Junit5 examples](junit-5/android) or [iOS Junit5 examples](junit-5/ios) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
   - Run `mvn test -P sample-test`
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
 
 - Junit4
-  - Update `browserstack.yml` file at root level of [Android Junit4 examples](android/junit4-examples) or [iOS Junit4 examples](ios/junit4-examples) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Simply configure the browserstackLocal parameter in the browserstack.yml file accordingly in [Android Junit4 examples](android/junit4-examples) or [iOS Junit4 examples](ios/junit4-examples).
+  - Update `browserstack.yml` file at root level of [Android Junit4 examples](junit-4/android) or [iOS Junit4 examples](junit-4/ios) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
+  - Simply configure the browserstackLocal parameter in the browserstack.yml file accordingly in [Android Junit4 examples](junit-4/android) or [iOS Junit4 examples](junit-4/ios).
     ```
     browserstackLocal: true
     ```
@@ -87,7 +87,7 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
 
   - Junit5
     - Update `browserstack.yml` file at root level of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-    - Simply configure the browserstackLocal parameter in the browserstack.yml file accordingly in [Android Junit5 examples](android/junit5-examples) or [iOS Junit5 examples](ios/junit5-examples).
+    - Simply configure the browserstackLocal parameter in the browserstack.yml file accordingly in [Android Junit5 examples](junit-5/android) or [iOS Junit5 examples](junit-5/ios).
       ```
       browserstackLocal: true
       ```
