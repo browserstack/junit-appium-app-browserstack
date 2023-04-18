@@ -32,14 +32,14 @@ To install the dependencies for JUnit4 tests, run :
 - For Android
 
     ```sh
-    cd junit4-examples/android
+    cd junit-4/android
     mvn clean
     ```
 
 - For iOS
 
     ```sh
-    cd junit4-examples/ios
+    cd junit-4/ios
     mvn clean
     ```
 
@@ -50,14 +50,14 @@ To install the dependencies for JUnit5 tests, run :
 - For Android
 
     ```sh
-    cd junit5-examples/android
+    cd junit-5/android
     mvn clean
     ```
 
 - For iOS
 
     ```sh
-    cd junit5-examples/ios
+    cd junit-5/ios
     mvn clean
     ```
 
