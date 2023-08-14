@@ -54,46 +54,46 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Run mvn test for junit4 android
         run: |
-          cd junit4-examples/android
+          cd junit-4/android
           mvn compile
           mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit4 android
         run: |
-          cd junit4-examples/android
+          cd junit-4/android
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
       - name: Run mvn test for junit4 ios
         run: |
-          cd junit4-examples/ios
+          cd junit-4/ios
           mvn compile
           mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit4 ios
         run: |
-          cd junit4-examples/ios
+          cd junit-4/ios
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
       - name: Run mvn test for junit5 android
         run: |
-          cd junit5-examples/android
+          cd junit-5/android
           mvn compile
           mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit5 android
         run: |
-          cd junit5-examples/android
+          cd junit-5/android
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
       - name: Run mvn test for junit5 ios
         run: |
-          cd junit5-examples/ios
+          cd junit-5/ios
           mvn compile
           mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit5 ios
         run: |
-          cd junit5-examples/ios
+          cd junit-5/ios
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
       - if: always()
@@ -101,7 +101,7 @@ jobs:
         id: status-check-completed
         env:
           conclusion: ${{ job.status }}
-          job_name: TestNG Appium Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
+          job_name: JUnit Appium Repo ${{ matrix.Java }} - ${{ matrix.os }} Sample
           commit_sha: ${{ github.event.inputs.commit_sha }}
         with:
           github-token: ${{ github.token }}
