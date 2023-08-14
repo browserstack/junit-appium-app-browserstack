@@ -54,46 +54,46 @@ jobs:
           java-version: ${{ matrix.java }}
       - name: Run mvn test for junit4 android
         run: |
-          cd android/junit4-examples
-          mvn compile
-          mvn test
-          mvn test -P sample-test
-      - name: Run mvn test for junit5 android
-        run: |
-          cd android/junit5-examples
+          cd junit4-examples/android
           mvn compile
           mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit4 android
         run: |
-          cd android/junit4-examples
-          mvn compile
-          mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
-      - name: Run mvn profile sample-local-test for junit5 android
-        run: |
-          cd android/junit5-examples
+          cd junit4-examples/android
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
       - name: Run mvn test for junit4 ios
         run: |
-          cd ios/junit4-examples
-          mvn compile
-          mvn test
-          mvn test -P sample-test
-      - name: Run mvn test for junit5 ios
-        run: |
-          cd ios/junit5-examples
+          cd junit4-examples/ios
           mvn compile
           mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit4 ios
         run: |
-          cd ios/junit4-examples
+          cd junit4-examples/ios
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
+      - name: Run mvn test for junit5 android
+        run: |
+          cd junit5-examples/android
+          mvn compile
+          mvn test
+          mvn test -P sample-test
+      - name: Run mvn profile sample-local-test for junit5 android
+        run: |
+          cd junit5-examples/android
+          mvn compile
+          mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
+      - name: Run mvn test for junit5 ios
+        run: |
+          cd junit5-examples/ios
+          mvn compile
+          mvn test
+          mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit5 ios
         run: |
-          cd ios/junit5-examples
+          cd junit5-examples/ios
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
       - if: always()
