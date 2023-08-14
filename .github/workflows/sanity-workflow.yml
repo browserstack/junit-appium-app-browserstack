@@ -56,7 +56,6 @@ jobs:
         run: |
           cd junit-4/android
           mvn compile
-          mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit4 android
         run: |
@@ -67,7 +66,6 @@ jobs:
         run: |
           cd junit-4/ios
           mvn compile
-          mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit4 ios
         run: |
@@ -78,7 +76,6 @@ jobs:
         run: |
           cd junit-5/android
           mvn compile
-          mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit5 android
         run: |
@@ -89,7 +86,6 @@ jobs:
         run: |
           cd junit-5/ios
           mvn compile
-          mvn test
           mvn test -P sample-test
       - name: Run mvn profile sample-local-test for junit5 ios
         run: |
