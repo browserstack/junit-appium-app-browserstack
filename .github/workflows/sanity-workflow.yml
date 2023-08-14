@@ -68,12 +68,12 @@ jobs:
         run: |
           cd android/junit4-examples
           mvn compile
-          mvn test -P sample-local-test -Dbrowserstack.app="./LocalSample.apk"
+          mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
       - name: Run mvn profile sample-local-test for junit5 android
         run: |
           cd android/junit5-examples
           mvn compile
-          mvn test -P sample-local-test -Dbrowserstack.app="./LocalSample.apk"
+          mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.apk"
       - name: Run mvn test for junit4 ios
         run: |
           cd ios/junit4-examples
@@ -90,12 +90,12 @@ jobs:
         run: |
           cd ios/junit4-examples
           mvn compile
-          mvn test -P sample-local-test -Dbrowserstack.app="./LocalSample.ipa"
+          mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
       - name: Run mvn profile sample-local-test for junit5 ios
         run: |
           cd ios/junit5-examples
           mvn compile
-          mvn test -P sample-local-test -Dbrowserstack.app="./LocalSample.ipa"
+          mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
       - if: always()
         uses: actions/github-script@98814c53be79b1d30f795b907e553d8679345975
         id: status-check-completed
