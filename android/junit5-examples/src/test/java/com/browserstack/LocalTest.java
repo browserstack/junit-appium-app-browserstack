@@ -1,7 +1,7 @@
-package com.browserstack.run_local_test;
+package com.browserstack;
 
-import io.appium.java_client.MobileBy;
-import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.AppiumBy;
+
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -9,10 +9,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
 
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
+import java.time.Duration;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -24,16 +26,16 @@ public class LocalTest extends BrowserStackJUnitTest{
 
     createConnection(taskId);
 
-    AndroidElement searchElement = (AndroidElement) new WebDriverWait(driver, 30).until(
-        ExpectedConditions.elementToBeClickable(MobileBy.id("com.example.android.basicnetworking:id/test_action")));
+    WebElement searchElement = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+        ExpectedConditions.elementToBeClickable(AppiumBy.id("com.example.android.basicnetworking:id/test_action")));
     searchElement.click();
-    AndroidElement insertTextElement = (AndroidElement) new WebDriverWait(driver, 30).until(
-        ExpectedConditions.elementToBeClickable(MobileBy.className("android.widget.TextView")));
+    WebElement insertTextElement = (WebElement) new WebDriverWait(driver, Duration.ofSeconds(30)).until(
+        ExpectedConditions.elementToBeClickable(AppiumBy.className("android.widget.TextView")));
 
-    AndroidElement testElement = null;
-    List<AndroidElement> allTextViewElements = driver.findElementsByClassName("android.widget.TextView");
+    WebElement testElement = null;
+    List<WebElement> allTextViewElements = driver.findElements(AppiumBy.className("android.widget.TextView"));
     Thread.sleep(10);
-    for(AndroidElement textElement : allTextViewElements) {
+    for(WebElement textElement : allTextViewElements) {
       if(textElement.getText().contains("The active connection is")) {
         testElement = textElement;
       }

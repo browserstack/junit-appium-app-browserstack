@@ -1,18 +1,23 @@
 {
-    "server": "hub-cloud.browserstack.com",
-    "username": "BROWSERSTACK_USERNAME",
-    "access_key": "BROWSERSTACK_ACCESS_KEY",
-  
-    "capabilities": {
-      "project": "First Junit4 Android Project",
-      "build": "browserstack-build-1",
-      "name": "first_test",
-      "browserstack.debug": true,
-      "app": "bs://<app-id>"
-    },
-  
-    "environments": [{
-      "device": "Google Pixel 3",
-      "os_version":  "9.0"
-    }]
+  "server": "hub.browserstack.com",
+
+  "capabilities": {
+    "app": "bs://<app-id>",
+    "bstack:options": {
+      "projectName": "First Junit4 Android Project",
+      "buildName": "browserstack-build-1",
+      "sessionName": "BStack first_test",
+      "debug": true,
+      "userName": "BROWSERSTACK_USERNAME",
+      "accessKey": "BROWSERSTACK_ACCESS_KEY"
+    }
+  },
+
+  "environments": [
+    {
+      "deviceName": "Google Pixel 3",
+      "platformVersion": "9.0",
+      "platformName": "android"
+    }
+  ]
 }
