@@ -43,7 +43,7 @@ platforms:
     platformVersion: 15
     platformName: ios
   - deviceName: iPhone 15 Plus
-    osVersion: 17
+    platformVersion: 17
     platformName: ios
 
 # =======================
