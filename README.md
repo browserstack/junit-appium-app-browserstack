@@ -25,6 +25,10 @@ These code samples are currently based on:
    - If Maven is not downloaded, download it from [here](https://maven.apache.org/download.cgi)
    - For installation, follow the instructions [here](https://maven.apache.org/install.html)
 
+ 3. Gradle
+  - If Gradle is not downloaded, download it from [here](https://gradle.org/releases/)  
+  - For installation, follow the instructions [here](https://gradle.org/install/)   
+
 ### Install the dependencies
 
 To install the dependencies for JUnit4 tests, run :
@@ -69,11 +73,13 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
 
 - Junit4
   - Update `browserstack.yml` file at root level of [Android Junit4 examples](junit-4/android) or [iOS Junit4 examples](junit-4/ios) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
-  - Run `mvn test -P sample-test`
+  - Run `mvn test -P sample-test` to run in maven enviroment.
+  - Run `gradle clean sampleTest` to run in gradle enviroment.
 
 - Junit5
   - Update `browserstack.yml` file at root level of [Android Junit5 examples](junit-5/android) or [iOS Junit5 examples](junit-5/ios) with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
   - Run `mvn test -P sample-test`
+  - Run `gradle clean sampleTest` to run in gradle enviroment.
 
 ### **Use Local testing for apps that access resources hosted in development or testing environments :**
 
@@ -83,7 +89,8 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
     ```
     browserstackLocal: true
     ```
-  - Run `mvn test -P sample-local-test`
+  - Run `mvn test -P sample-local-test` to run in maven enviroment.
+  - Run `gradle clean sampleLocalTest` to run in gradle enviroment.
 
   - Junit5
     - Update `browserstack.yml` file at root level of Android Junit5 examples or iOS Junit5 examples with your [BrowserStack Username and Access Key](https://www.browserstack.com/accounts/settings)
@@ -91,7 +98,8 @@ Getting Started with Appium tests in Junit4 and Junit5 on BrowserStack couldn't 
       ```
       browserstackLocal: true
       ```
-    - Run `mvn test -P sample-local-test`
+   - Run `mvn test -P sample-local-test` to run in maven enviroment.
+   - Run `gradle clean sampleLocalTest` to run in gradle enviroment.
 
 **Note**: If you are facing any issues, refer [Getting Help section](#Getting-Help)
 
