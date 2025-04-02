@@ -72,19 +72,19 @@ jobs:
           cd junit-4/ios
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
-      - name:  Run gradle test for junit4 android  
+      - name: Run gradle test for junit4 android  
         run: |
           cd junit-4/android
           gradle clean sampleTest
-      - name:  Run gradle sample-local-test for junit4 android  
+      - name: Run gradle sample-local-test for junit4 android  
         run: |
           cd junit-4/android
           gradle clean sampleLocalTest -D"browserstack.app"="./LocalSample.apk"
-      - name:  Run gradle test for junit4 ios  
+      - name: Run gradle test for junit4 ios  
         run: |
           cd junit-4/ios
           gradle clean sampleTest
-      - name:  Run gradle sample-local-test for junit4 ios  
+      - name: Run gradle sample-local-test for junit4 ios  
         run: |
           cd junit-4/ios
           gradle clean sampleLocalTest -D"browserstack.app"="./LocalSample.ipa"    
@@ -108,19 +108,19 @@ jobs:
           cd junit-5/ios
           mvn compile
           mvn test -P sample-local-test -D"browserstack.app"="./LocalSample.ipa"
-      - name:  Run gradle test for junit5 android  
+      - name: Run gradle test for junit5 android  
         run: |
           cd junit-5/android
           gradle clean sampleTest
-      - name:  Run gradle sample-local-test for junit4 android  
+      - name: Run gradle sample-local-test for junit5 android  
         run: |
           cd junit-5/android
           gradle clean sampleLocalTest -D"browserstack.app"="./LocalSample.apk"
-      - name:  Run gradle test for junit4 ios  
+      - name: Run gradle test for junit5 ios  
         run: |
           cd junit-5/ios
           gradle clean sampleTest
-      - name:  Run gradle sample-local-test for junit4 ios  
+      - name: Run gradle sample-local-test for junit5 ios  
         run: |
           cd junit-5/ios
           gradle clean sampleLocalTest -D"browserstack.app"="./LocalSample.ipa"     
