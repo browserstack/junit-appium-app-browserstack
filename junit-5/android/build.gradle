@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+    id 'com.browserstack.gradle-sdk' version "1.1.2"
+}
+
+repositories { mavenCentral() }
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.4.0'
+    implementation 'io.appium:java-client:8.1.1'
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+    implementation 'com.browserstack:browserstack-java-sdk:latest.release'
+}
+
+group = 'com.browserstack'
+version = '1.0-SNAPSHOT'
+description = 'junit-browserstack'
+sourceCompatibility = '1.8'
+
+def browserstackSDKArtifact = configurations.compileClasspath.resolvedConfiguration.resolvedArtifacts.find { it.name == 'browserstack-java-sdk' }
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    systemProperties = System.properties
+    jvmArgs += "-javaagent:${browserstackSDKArtifact.file}"
+}
+
+task sampleTest(type: Test) {
+    dependsOn cleanTest
+    useJUnitPlatform()
+
+    include 'com/browserstack/FirstTest*'
+
+    jvmArgs "-javaagent:${configurations.testRuntimeClasspath.find { it.name.contains('browserstack-java-sdk') }}"
+}
+
+
+task sampleLocalTest(type: Test) {
+    dependsOn cleanTest
+    useJUnitPlatform()
+
+    include 'com/browserstack/LocalTest*'
+
+    jvmArgs "-javaagent:${configurations.testRuntimeClasspath.find { it.name.contains('browserstack-java-sdk') }}"
+}

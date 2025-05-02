@@ -4,3 +4,9 @@ local.log
 .idea
 */*/logs
 *.iml
+bstack_*
+gradlew*
+gradle
+.gradle
+build
+reports
