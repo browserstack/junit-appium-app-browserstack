@@ -1,0 +1,14 @@
+[ {
+  "duration" : 28675.704291000962,
+  "eventName" : "sdk:app-automate:app-upload",
+  "startTime" : 2.9144034375917E7,
+  "success" : true,
+  "worker" : 1,
+  "failure" : null,
+  "details" : null,
+  "entryType" : "measure",
+  "platform" : 0,
+  "command" : null,
+  "testName" : null,
+  "hookType" : ""
+} ]
