@@ -1,0 +1,98 @@
+11:09:40.131 [main] DEBUG c.browserstack.BrowserStackJavaAgent - [AGENT] Found agent via ProtectionDomain: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:40.132 [main] INFO  c.browserstack.BrowserStackJavaAgent - [AGENT] Stored agent path for child processes: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:40.133 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+11:09:40.136 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.4.0
+11:09:40.136 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 8.1.1
+11:09:40.215 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {basedir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, test=AIAuthoringTest, user.dir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, localrepository=/Users/bhuwankashyap/.m2/repository}
+11:09:40.330 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger ROOT
+11:09:40.330 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to TRACE for logger browserStackAutomationFileDebugger
+11:09:40.330 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger browserStackFileDebugger
+11:09:40.330 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger com
+11:09:40.340 [main] INFO  c.browserstack.BrowserStackJavaAgent - Using app: [-bs://e062a41d22626330df16b78ddf43fb319f078be2]
+11:09:40.341 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to junit4
+11:09:40.341 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 3f4d1235-b620-4737-b9fe-30b1c126373e
+11:09:40.341 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:09:46.401 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=junit4
+11:09:47.128 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+11:09:48.141 [main] INFO  com.browserstack.testOps.Listener - Testhub started with id: x5oie7wiksdurs5oxe3l0v83pv5jplzfyuy8zrqd
+11:09:48.141 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:09:48.141 [main] INFO  c.browserstack.BrowserStackJavaAgent - Starting BrowserStack Local......
+11:09:58.330 [main] INFO  com.browserstack.LocalFactory - BrowserStack Local Started Successfully.
+11:09:58.690 [main] DEBUG c.browserstack.BrowserStackJavaAgent - [AGENT] Found agent via ProtectionDomain: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:58.691 [main] INFO  c.browserstack.BrowserStackJavaAgent - [AGENT] Stored agent path for child processes: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:58.692 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+11:09:58.714 [main] DEBUG c.browserstack.BrowserStackJavaAgent - [AGENT] Found agent via ProtectionDomain: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:58.716 [main] INFO  c.browserstack.BrowserStackJavaAgent - [AGENT] Stored agent path for child processes: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:58.716 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+11:09:58.715 [main] DEBUG c.browserstack.BrowserStackJavaAgent - [AGENT] Found agent via ProtectionDomain: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:58.716 [main] INFO  c.browserstack.BrowserStackJavaAgent - [AGENT] Stored agent path for child processes: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:58.717 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+11:09:58.777 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {basedir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, test=AIAuthoringTest, user.dir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, localrepository=/Users/bhuwankashyap/.m2/repository}
+11:09:58.806 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {basedir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, test=AIAuthoringTest, user.dir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, localrepository=/Users/bhuwankashyap/.m2/repository}
+11:09:58.808 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {basedir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, test=AIAuthoringTest, user.dir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, localrepository=/Users/bhuwankashyap/.m2/repository}
+11:09:58.924 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger ROOT
+11:09:58.924 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to TRACE for logger browserStackAutomationFileDebugger
+11:09:58.924 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger browserStackFileDebugger
+11:09:58.924 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger com
+11:09:58.925 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: ff219903-caaa-4cbd-9475-5064fb15f757
+11:09:58.925 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:09:58.942 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger ROOT
+11:09:58.943 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to TRACE for logger browserStackAutomationFileDebugger
+11:09:58.943 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger browserStackFileDebugger
+11:09:58.943 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger com
+11:09:58.943 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: fb4269ef-849b-4bc9-89fe-0220f2edc6ce
+11:09:58.943 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:09:58.944 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger ROOT
+11:09:58.945 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to TRACE for logger browserStackAutomationFileDebugger
+11:09:58.945 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger browserStackFileDebugger
+11:09:58.945 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger com
+11:09:58.947 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 904e8cd7-2c56-42a4-86ea-8bdf8c87b58d
+11:09:58.947 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:10:04.493 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=junit4
+11:10:04.493 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=junit4
+11:10:04.500 [main] INFO  com.browserstack.v2.SdkCLI - Disabling Cli for framework=junit4
+11:10:04.535 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+11:10:04.544 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+11:10:04.555 [main] INFO  c.browserstack.BrowserStackJavaAgent - Project and debug logs are captured by default. To disable, set disableAutoCaptureLogs: true in config.
+11:10:04.940 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/AIAuthoringTest
+11:10:04.974 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/AIAuthoringTest
+11:10:04.986 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/AIAuthoringTest
+11:10:04.993 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/BrowserStackJUnitTest
+11:10:05.040 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/BrowserStackJUnitTest
+11:10:05.043 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/BrowserStackJUnitTest
+11:10:05.397 [main] DEBUG c.browserstack.utils.UtilityMethods - [Patch]: SDK enabled, patching remote server
+11:10:05.400 [main] DEBUG c.browserstack.utils.UtilityMethods - [Patch]: SDK enabled, patching remote server
+11:10:05.403 [main] DEBUG c.browserstack.utils.UtilityMethods - [Patch]: SDK enabled, patching remote server
+11:10:05.410 [main] DEBUG c.browserstack.utils.UtilityMethods - [Patch]: SDK enabled, patching remote server
+11:10:05.411 [main] DEBUG c.browserstack.utils.UtilityMethods - [Patch]: SDK enabled, patching remote server
+11:10:05.413 [main] DEBUG c.browserstack.utils.UtilityMethods - [Patch]: SDK enabled, patching remote server
+11:11:41.992 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/BrowserStackJUnitTest
+11:11:43.326 [main] INFO  c.b.utils.SeleniumMethodUtils - Session ID status marking: dc50beb54be3f70458bcda08f2c8345c4244096d
+11:11:43.326 [main] INFO  c.b.utils.SeleniumMethodUtils - Session ID status marking: dc50beb54be3f70458bcda08f2c8345c4244096d
+11:11:44.069 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: Starting cleanup process
+11:11:44.070 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: No automation framework instances found to quit for CLI flow
+11:12:00.567 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/BrowserStackJUnitTest
+11:12:02.333 [main] INFO  c.b.utils.SeleniumMethodUtils - Session ID status marking: a6cb67f354c9eacc27c99e79563049c464e3bb35
+11:12:02.333 [main] INFO  c.b.utils.SeleniumMethodUtils - Session ID status marking: a6cb67f354c9eacc27c99e79563049c464e3bb35
+11:12:03.611 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: Starting cleanup process
+11:12:03.611 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: No automation framework instances found to quit for CLI flow
+11:12:31.991 [main] DEBUG c.browserstack.utils.UtilityMethods - [findFileMatcher] Current Path is :: /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android, TestClass :: com/browserstack/BrowserStackJUnitTest
+11:12:33.501 [main] INFO  c.b.utils.SeleniumMethodUtils - Session ID status marking: 8454fe22078c080f3e31f7a84795aa3c508f9770
+11:12:33.501 [main] INFO  c.b.utils.SeleniumMethodUtils - Session ID status marking: 8454fe22078c080f3e31f7a84795aa3c508f9770
+11:12:34.565 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: Starting cleanup process
+11:12:34.565 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: No automation framework instances found to quit for CLI flow
+11:12:34.908 [main] DEBUG c.browserstack.utils.UtilityMethods - Browserstack Gradle Config File does not exist.
+11:12:35.884 [Thread-0] INFO  c.browserstack.utils.LogReportingAPI - Visit https://automation.browserstack.com/builds/x5oie7wiksdurs5oxe3l0v83pv5jplzfyuy8zrqd to view build report, insights, and many more debugging information all at one place!
+
+11:12:35.884 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+11:12:35.897 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - [collectBuildData] Skipping build data collection: runSmartSelection is not enabled.
+11:12:35.898 [Thread-0] INFO  com.browserstack.v2.SdkCLI - stop: cli is not running.
+11:12:40.423 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - Browserstack yml path passed - /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-4/android/browserstack.yml
+11:12:41.733 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - Browserstack Gradle Config File does not exist.
+11:12:43.099 [Thread-0] INFO  c.browserstack.utils.UtilityMethods - View build on BrowserStack dashboard: https://app-automate.browserstack.com/dashboard/v2/builds/141752979e2412393f0fd53889d7e9acc628e3b4
+11:12:43.099 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+11:12:43.104 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - Server side buildName(browserstack build  3) is not same as client side buildName(browserstack build #3)
+11:12:43.105 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: Starting cleanup process
+11:12:43.105 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: No automation framework instances found to quit for CLI flow
+11:12:43.107 [Thread-0] INFO  c.browserstack.BrowserStackJavaAgent - SDK run ended for id: 3f4d1235-b620-4737-b9fe-30b1c126373e, testhub id: x5oie7wiksdurs5oxe3l0v83pv5jplzfyuy8zrqd
+11:12:43.107 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
