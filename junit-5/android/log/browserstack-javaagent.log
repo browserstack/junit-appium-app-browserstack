@@ -1,0 +1,48 @@
+11:09:41.367 [main] DEBUG c.browserstack.BrowserStackJavaAgent - [AGENT] Found agent via ProtectionDomain: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:41.368 [main] INFO  c.browserstack.BrowserStackJavaAgent - [AGENT] Stored agent path for child processes: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:09:41.368 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+11:09:41.370 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.4.0
+11:09:41.370 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 8.1.1
+11:09:41.443 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {basedir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-5/android, test=AIAuthoringTest, user.dir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-5/android, localrepository=/Users/bhuwankashyap/.m2/repository}
+11:09:41.551 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger ROOT
+11:09:41.551 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to TRACE for logger browserStackAutomationFileDebugger
+11:09:41.551 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger browserStackFileDebugger
+11:09:41.551 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger com
+11:09:41.561 [main] INFO  c.browserstack.BrowserStackJavaAgent - Using app: [-bs://e062a41d22626330df16b78ddf43fb319f078be2]
+11:09:41.561 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to junit5
+11:09:41.562 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 6378025a-9fc8-44d0-84e1-cd553df704eb
+11:09:41.562 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:09:46.996 [main] INFO  com.browserstack.v2.SdkCliUtils - CLI update check successful. Status: 200
+11:09:57.946 [main] INFO  com.browserstack.v2.SdkCLI - spawning command='/Users/bhuwankashyap/.browserstack/cli/binary-macos-arm64' 'sdk' 'tcp'
+11:25:30.827 [main] DEBUG c.browserstack.BrowserStackJavaAgent - [AGENT] Found agent via ProtectionDomain: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:25:30.828 [main] INFO  c.browserstack.BrowserStackJavaAgent - [AGENT] Stored agent path for child processes: /Users/bhuwankashyap/.m2/repository/com/browserstack/browserstack-java-sdk/1.56.6/browserstack-java-sdk-1.56.6.jar
+11:25:30.828 [main] DEBUG c.browserstack.BrowserStackJavaAgent - Extracted CLI argument from system : null
+11:25:30.832 [main] INFO  c.browserstack.BrowserStackJavaAgent - Selenium version detected - 4.4.0
+11:25:30.832 [main] INFO  c.browserstack.BrowserStackJavaAgent - Appium version detected - 8.1.1
+11:25:30.906 [main] DEBUG c.b.config.BrowserStackConfig - Cli Config passed - {basedir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-5/android, test=AIAuthoringTest, user.dir=/Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-5/android, localrepository=/Users/bhuwankashyap/.m2/repository}
+11:25:31.041 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger ROOT
+11:25:31.041 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to TRACE for logger browserStackAutomationFileDebugger
+11:25:31.041 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger browserStackFileDebugger
+11:25:31.041 [main] DEBUG c.b.logger.BrowserstackLoggerFactory - Log Level set to INFO for logger com
+11:25:31.053 [main] INFO  c.browserstack.BrowserStackJavaAgent - Using app: [-bs://e062a41d22626330df16b78ddf43fb319f078be2]
+11:25:31.053 [main] INFO  c.browserstack.BrowserStackJavaAgent - Framework set to junit5
+11:25:31.054 [main] INFO  c.browserstack.BrowserStackJavaAgent - SDK run started with id: 62c534f4-f834-4478-905d-e861eadd7a47
+11:25:31.054 [main] INFO  c.b.config.BrowserStackConfig - INFO
+11:25:36.602 [main] INFO  com.browserstack.v2.SdkCliUtils - CLI update check successful. Status: 200
+11:25:48.040 [main] INFO  com.browserstack.v2.SdkCLI - spawning command='/Users/bhuwankashyap/.browserstack/cli/binary-macos-arm64' 'sdk' 'tcp'
+11:51:51.482 [SIGTERM handler] INFO  c.b.utils.ExitSignalHandler - Shutdown triggered by: TERM 15
+11:51:51.496 [SIGTERM handler] INFO  c.b.config.BrowserStackConfig - INFO
+11:51:51.497 [SIGTERM handler] WARN  c.b.u.ClientTroubleshootingService - [SDK-TRA-005] Some tests might not appear on the BrowserStack dashboard because the test process was interrupted with TERM 15.
+11:51:51.532 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - [collectBuildData] Skipping build data collection: runSmartSelection is not enabled.
+11:51:51.532 [Thread-0] INFO  com.browserstack.v2.SdkCLI - stop: cli is not running.
+11:51:52.638 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - Browserstack yml path passed - /Users/bhuwankashyap/Documents/junit-appium-app-browserstack/junit-5/android/browserstack.yml
+11:51:53.542 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - Browserstack Gradle Config File does not exist.
+11:51:53.543 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+11:51:53.543 [Thread-0] WARN  c.b.u.ClientTroubleshootingService - Uh-oh! We detected some issues during this run. Error codes: [SDK-TRA-005]. For details and troubleshooting steps, visit https://www.browserstack.com/docs/test-reporting-and-analytics/sdk-troubleshooting/error-codes?ref=sdk.
+11:51:54.014 [Thread-0] INFO  c.browserstack.utils.UtilityMethods - View build on BrowserStack dashboard: https://app-automate.browserstack.com/dashboard/v2/builds/47b1540ba6261b98bd6109a3f154b1b4a0b31ff6
+11:51:54.014 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO
+11:51:54.034 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - Server side buildName(browserstack build  4) is not same as client side buildName(browserstack build #4)
+11:51:54.035 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: Starting cleanup process
+11:51:54.036 [Thread-0] DEBUG c.browserstack.utils.UtilityMethods - quitAllWebDriversForCLIFlow: No automation framework instances found to quit for CLI flow
+11:51:54.043 [Thread-0] INFO  c.browserstack.BrowserStackJavaAgent - SDK run ended for id: 6378025a-9fc8-44d0-84e1-cd553df704eb, testhub id: 
+11:51:54.043 [Thread-0] INFO  c.b.config.BrowserStackConfig - INFO

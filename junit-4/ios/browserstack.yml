@@ -23,7 +23,7 @@ buildIdentifier: '#${BUILD_NUMBER}' # Supports strings along with either/both ${
 # Set `framework` of your test suite. Example, `testng`, `cucumber`, `cucumber-testng`
 # This property is needed to send test context to BrowserStack (test name, status)
 framework: junit4
-
+aiAuthoring: true
 source: junit4:appium-sample-sdk:v1.1
 
 app: ./BStackSampleApp.ipa
